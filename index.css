@@ -1,0 +1,273 @@
+body {
+  font-family: 'Libre Franklin', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.search-cart {
+  display: flex;
+  align-items: center;
+}
+
+.search-cart svg {
+  margin-right: 10px;
+}
+
+.navbar input[type="checkbox"] {
+  display: none;
+}
+
+.navbar label {
+  display: none;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.navbar label svg {
+  width: 24px;
+  height: 24px;
+  fill: #333;
+}
+
+.banner {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr;
+  gap: 10px;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+}
+
+.product img {
+  width: 316px;
+  height: 226px;
+  object-fit: contain;
+}
+
+.product-info {
+  padding: 1px;
+  margin-top: 10px;
+}
+
+.quantity-controller {
+  padding: 10px;
+}
+
+.product-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-footer.product-info {
+  flex: 1;
+}
+
+.product-footer.quantity-controller {
+  flex: 1;
+}
+
+.quantity-controller button {
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: grey;
+  cursor: pointer;
+}
+
+.quantity-controller span {
+  font-size: 15px;
+  font-weight: bold;
+  margin: 4px;
+}
+
+footer {
+  background-color: #fff;
+  padding: 10px;
+  text-align: center;
+  color: #333;
+  clear: both;
+}
+
+.navfooter ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navfooter li {
+  margin-right: 20px;
+}
+
+.navfooter a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 1200px) {
+  .products {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar label {
+    display: block;
+  }
+  .navbar ul {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  .navbar input[type="checkbox"]:checked + ul {
+    display: block;
+  }
+  .search-cart {
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-right: 20px;
+  }
+  .search-cart svg {
+    margin-right: 10px;
+  }
+  .logo {
+    margin-right: 0;
+  }
+  .banner {
+    height: 150px;
+  }
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .product {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product img {
+    width: 150px;
+    height: 100px;
+  }
+}
+
+  @media only screen and (max-width: 480px) {
+    .navbar {
+      flex-direction: column;
+      align-items: center;
+    }
+    .navbar label {
+      display: block;
+    }
+    .navbar ul {
+      display: none;
+      position: absolute;
+      top: 50px;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    .navbar input[type="checkbox"]:checked + ul {
+      display: block;
+    }
+    .navfooter ul {
+      flex-direction: column;
+    }
+    .navfooter li {
+      margin-right: 0;
+    }
+    .search-cart {
+      flex-direction: row;
+      justify-content: flex-end;
+      margin-right: 20px;
+    }
+    .search-cart svg {
+      margin-right: 10px;
+    }
+    .logo {
+      margin-right: 0;
+    }
+    .banner {
+      height: 100px;
+    }
+    .products {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .product {
+      flex-direction: column;
+      align-items: center;
+    }
+    .product img {
+      width: 100px;
+      height: 75px;
+    }
+  }
